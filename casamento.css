@@ -1,0 +1,455 @@
+/* Arquivo casamento.css */
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbfaf9;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem; /* Adiciona padding apenas na parte inferior */
+}
+
+.couple-photo {
+    width: 100%;
+    height: 65vh; /* Aumenta a altura da foto */
+    overflow: hidden; /* Garante que a imagem não saia do contêiner */
+    position: relative;
+}
+
+.couple-photo img {
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Altura automática */
+    object-fit: cover; /* Redimensiona a imagem para preencher o contêiner */
+    object-position: center; /* Exibe o centro vertical da imagem */
+    border-radius: 0; /* Remove o arredondamento da borda */
+    transform: translateY(-40%);
+    opacity: 90%;
+}
+
+.couple-details {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 30rem;
+}
+
+.couple-names {
+    font-family: "Tangerine"; /* Usa a fonte Tangerine */
+    color: white; /* Cor do texto */
+    font-size: 7rem; /* Tamanho da fonte */
+    line-height: 108px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.wedding-date { 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Organiza os itens do menu na horizontal */
+}
+
+nav ul li {
+    margin-right: 1rem; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: #a2361e; /* Cor do texto */
+    font-family: Playball, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Fonte Playball */
+}
+
+nav ul li a:hover {
+    background-color: #ecd7d2; /* Cor de fundo ao passar o mouse */
+    color: #a2361e; /* Cor do texto ao passar o mouse */
+}
+
+nav {
+    background-color: #f8f8f8; /* Cor de fundo do menu */
+    width: 100%; /* Largura total */
+    font-size: 1.5rem;
+    display: flex; /* Organiza os itens do menu na horizontal */
+    justify-content: center; /* Centraliza os itens do menu */
+}
+
+nav ul li a.selected {
+    background-color: #ecd7d2; /* Cor de fundo quando selecionado */
+}
+
+#dropdown-menu {
+    display: none; /* Define o menu dropdown como oculto por padrão */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    width: 90%;
+}
+
+
+.dropdown {
+    position: absolute;
+    left: 1rem;
+    top: 12rem;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #a2361e;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    min-width: 22rem; /* Define a largura para 90% da largura da página */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 1.5rem;
+    font-family: Playball, "Helvetica Neue", Helvetica, Arial, sans-serif; /* Fonte Playball */
+}
+
+.dropdown-content a {
+    color: #a2361e; /* Cor do texto */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ecd7d2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f8f8f8;
+}
+
+
+section {
+    padding: 4rem 0;
+    text-align: center;
+    position: relative; /* Define a posição relativa para permitir o posicionamento absoluto */
+}
+
+.divider {
+    position: relative;
+    left: 0; /* Posiciona a divisória no canto esquerdo */
+    width: 100%; /* Largura da divisória */
+    border-top: 0.2rem solid #a2361e; /* Cor e estilo da linha da divisória */
+    text-align: center; /* Alinha o texto no centro */
+    background-color: #f8f8f8; /* Cor de fundo da divisória */
+}
+
+.divider h2 {
+    margin: 0; /* Remove a margem do título */
+    font-family: 'Playball', cursive; /* Aplica a fonte Playball ao título */
+    color: #a2361e; /* Cor do texto do título */
+    font-size: 2.4rem; /* Tamanho do texto do título */
+}
+
+.texto-padrao {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: #7f7f7f;
+}
+
+#menu {
+    width: 100%;
+    background-color: #f8f8f8; /* Cor de fundo do menu */
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Garante que o menu fixo fique sobre outros elementos */
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o menu */
+}
+
+
+.photo-container {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem; /* Espaçamento inferior para separar do conteúdo abaixo */
+}
+
+.round-photo {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%; /* Torna a foto redonda */
+    margin: 0 0rem; /* Espaçamento entre as fotos */
+    position: relative;
+    border: 0.5rem solid #fff; /* Adiciona uma borda branca */
+}
+
+.round-photo:nth-child(2) {
+    margin-left: -2rem; /* Desloca a segunda foto para cima para sobrepor ligeiramente a primeira */
+}
+
+.content-container {
+    display: flex;
+    justify-content: center; /* Distribui os elementos igualmente */
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.caption {
+    font-family: Playball, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3.5rem; /* Tamanho do texto */
+    margin: 1rem; /* Espaçamento entre os textos */
+    color: #c78678;
+}
+
+.name {
+    font-size: 3rem; /* Tamanho do texto */
+    color: #a2361e;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.divider2 {
+    border-top: 0.1rem solid #c78678; /* Adiciona uma linha divisória */
+    width: 11rem; /* Define a largura da linha divisória */
+    margin: 1rem; /* Espaçamento entre as divisórias e os textos */
+}
+
+.divComercial {
+    font-size: 12rem;
+    color: #c78678;
+}
+
+.event-container {
+    display: flex;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    width: 60%; /* Definir largura da caixa */
+    height: 30%; /* Definir altura da caixa */
+    margin: auto; /* Centralizar horizontalmente */
+}
+
+.cerimonia-column {
+    width: 40%; /* Definir largura da coluna da cerimônia */
+}
+
+.details-column {
+    width: 30%; /* Definir largura da coluna dos outros detalhes */
+    text-align: center;
+    text-justify: auto;
+}
+
+.map-column {
+    width: 30%; /* Definir largura total da coluna do mapa */
+    height: 25rem;
+    margin-top: 3.5rem;
+}
+
+.cerimonia-details {
+    text-align: center;
+    padding-right: 1rem; /* Adicionar espaço entre as colunas */
+}
+
+.other-details {
+    width: 100%;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.left-details,
+.center-details,
+.right-details {
+    margin-bottom:0.3rem;
+}
+
+.event-title {
+    color: #a2361e;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.event-subtitle {
+    font-family: 'Playball', cursive;
+    color: #c78678;
+    font-size: 3rem;
+    text-align: left;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .texto-padrao {
+        font-size: 1.6rem; /* Reduz o tamanho do texto */
+        margin-top: 2rem; /* Ajusta o espaçamento superior */
+        overflow-x: auto; /* Adiciona rolagem horizontal para conteúdo longo */
+        white-space: pre-wrap; /* Quebra de linha automática */
+        word-wrap: break-word; /* Quebra de palavra */
+    }
+
+    .header-content {
+        flex-direction: column; /* Altera para layout de coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .couple-photo {
+        height: 30vh; /* Reduz a altura da foto do casal */
+    }
+
+    .couple-details {
+        bottom: 40%; /* Posiciona o texto do casal no centro vertical */
+        left: 50%; /* Posiciona o texto do casal no centro horizontal */
+        transform: translate(-50%); /* Centraliza o texto do casal */
+        width: 80%; /* Define a largura do texto do casal */
+        max-width: 30rem; /* Define a largura máxima do texto do casal */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .couple-names {
+        font-family: "Tangerine"; /* Usa a fonte Tangerine */
+        color: white; /* Cor do texto */
+        font-size: 4rem; /* Tamanho da fonte */
+        text-shadow: 1px 1px 1px black;
+    }
+    
+    .wedding-date { 
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.1rem;
+        color: #fff;
+        text-shadow: 1px 1px 1px black;
+    }
+
+    nav {
+        width: 100%; /* Largura total */
+        justify-content: center; /* Centraliza os itens */
+    }
+
+    .menu-link {
+        display: none;
+    }
+    
+    .dropdown-icon {
+        display: block;
+    }
+    
+    #dropdown-menu {
+        display: block;
+    }
+
+
+    .round-photo {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%; /* Torna a foto redonda */
+        margin: 0 0rem; /* Espaçamento entre as fotos */
+        position: relative;
+        border: 0.5rem solid #fff; /* Adiciona uma borda branca */
+    }
+
+    .caption {
+        font-family: Playball, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 2rem; /* Tamanho do texto */
+        margin: 1rem; /* Espaçamento entre os textos */
+        color: #c78678;
+    }
+    
+    .name {
+        font-size: 2rem; /* Tamanho do texto */
+        color: #a2361e;
+        font-family: 'Times New Roman', Times, serif;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .divider2 {
+        border-top: 0.1rem solid #c78678; /* Adiciona uma linha divisória */
+        width: 6rem; /* Define a largura da linha divisória */
+        margin: 1rem; /* Espaçamento entre as divisórias e os textos */
+    }
+    
+    .divComercial {
+        font-size: 8rem;
+        color: #c78678;
+    }
+    
+    .section {
+        padding: 2rem 1rem; /* Reduz o espaçamento das seções */
+    }
+
+    .texto-padrao {
+        font-size: 1.6rem; /* Reduz o tamanho do texto */
+        margin-top: 2rem; /* Ajusta o espaçamento superior */
+        overflow-x: auto; /* Adiciona rolagem horizontal para conteúdo longo */
+        white-space: pre-wrap; /* Quebra de linha automática */
+        word-wrap: break-word; /* Quebra de palavra */
+    }
+
+    .event-container {
+        flex-direction: column; /* Altera para layout de coluna */
+    }
+
+    .cerimonia-column,
+    .details-column,
+    .map-column {
+        width: 100%; /* Define a largura total */
+    }
+
+    .cerimonia-details {
+        padding-right: 0; /* Remove o espaço à direita */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .event-details {
+        text-align: center; /* Centraliza o texto dos detalhes do evento */
+    }   
+
+    .event-subtitle {
+        text-align: center; /* Centraliza o título do evento */
+    }
+
+    footer {
+        padding: 1rem 0; /* Reduz o padding do rodapé */
+    }
+}
